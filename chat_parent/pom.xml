@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.februy</groupId>
+	<artifactId>chat_parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+
+	<properties>
+		<protostuff.version>1.5.2</protostuff.version>
+
+        <spring.version>4.1.7.RELEASE</spring.version>
+	</properties>
+	<dependencyManagement>
+
+		<dependencies>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.16.20</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			
+			<dependency>
+
+                <groupId>io.protostuff</groupId>
+
+                <artifactId>protostuff-core</artifactId>
+
+                <version>${protostuff.version}</version>
+
+            </dependency>
+
+            <dependency>
+
+                <groupId>io.protostuff</groupId>
+
+                <artifactId>protostuff-runtime</artifactId>
+
+                <version>${protostuff.version}</version>
+
+            </dependency>
+			
+			
+		</dependencies>
+
+	</dependencyManagement>
+
+	<modules>
+		<module>../chat-server</module>
+		<module>../chat_client</module>
+		<module>../chat_common</module>
+	</modules>
+</project>
